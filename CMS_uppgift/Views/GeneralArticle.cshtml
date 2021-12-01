@@ -1,0 +1,22 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.GeneralArticle>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+@section headTitle{
+@Model.Value("title")
+}
+
+<div>
+    <h1>@Model.Value("title")</h1>
+</div>
+
+<div>
+    <img src="@Model.LeadImage.Url()">
+</div>
+
+<div>
+    @Model.Value("content")
+</div>
